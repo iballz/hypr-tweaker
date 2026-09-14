@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1e2e"/>
+      <stop offset="50%" stop-color="#181825"/>
+      <stop offset="100%" stop-color="#11111b"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b4befe"/>
+      <stop offset="100%" stop-color="#89b4fa"/>
+    </linearGradient>
+    <linearGradient id="sliderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#cba6f7"/>
+      <stop offset="100%" stop-color="#b4befe"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base Canvas -->
+  <rect x="16" y="16" width="224" height="224" rx="52" fill="url(#bgGrad)" stroke="#313244" stroke-width="2" filter="url(#shadow)"/>
+
+  <!-- Window Header / Title Bar -->
+  <path d="M 16 68 L 240 68" stroke="#313244" stroke-width="1.5"/>
+  <circle cx="46" cy="42" r="6" fill="#f38ba8"/>
+  <circle cx="66" cy="42" r="6" fill="#f9e2af"/>
+  <circle cx="86" cy="42" r="6" fill="#a6e3a1"/>
+
+  <!-- Tiled Window Preview (Gaps & Rounding) -->
+  <!-- Left Window -->
+  <rect x="42" y="86" width="76" height="66" rx="14" fill="#1e1e2e" stroke="#89b4fa" stroke-width="2.5" filter="url(#glow)"/>
+  
+  <!-- Right Window -->
+  <rect x="138" y="86" width="76" height="66" rx="14" fill="#1e1e2e" stroke="#45475a" stroke-width="2"/>
+
+  <!-- Slider Track 1 (Gaps / Rounding) -->
+  <rect x="42" y="174" width="172" height="8" rx="4" fill="#313244"/>
+  <rect x="42" y="174" width="104" height="8" rx="4" fill="url(#sliderGrad)"/>
+  <circle cx="146" cy="178" r="9" fill="#ffffff" filter="url(#shadow)"/>
+  <circle cx="146" cy="178" r="4" fill="#b4befe"/>
+
+  <!-- Slider Track 2 (Blur / Opacity) -->
+  <rect x="42" y="202" width="172" height="8" rx="4" fill="#313244"/>
+  <rect x="42" y="202" width="62" height="8" rx="4" fill="url(#sliderGrad)"/>
+  <circle cx="104" cy="206" r="9" fill="#ffffff" filter="url(#shadow)"/>
+  <circle cx="104" cy="206" r="4" fill="#b4befe"/>
+</svg>

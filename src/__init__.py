@@ -1,0 +1,1 @@
+"""Hypr Tweaker package."""

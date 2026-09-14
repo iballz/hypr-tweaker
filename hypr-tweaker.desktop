@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Hypr Tweaker
+GenericName=Hyprland Visual Settings
+Comment=Live visual configurator for Hyprland window gaps, blur, rounding, borders, animations, and inputs
+Exec=hypr-tweaker
+Icon=hypr-tweaker
+Terminal=false
+Type=Application
+Categories=Settings;DesktopSettings;Utility;
+Keywords=hyprland;caelestia;gaps;blur;rounding;border;font;settings;tweaker;customization;
+StartupNotify=true
+StartupWMClass=io.github.iballz.hyprtweaker

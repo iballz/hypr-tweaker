@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# Hypr Tweaker Launcher Wrapper
+set -e
+
+# Resolve directory of this script
+SCRIPT_DIR="$(cd "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")" && pwd)"
+
+# Search candidates for hypr_tweaker.py
+CANDIDATES=(
+    "$SCRIPT_DIR/../src/hypr_tweaker.py"
+    "$SCRIPT_DIR/../share/hypr-tweaker/src/hypr_tweaker.py"
+    "/usr/share/hypr-tweaker/src/hypr_tweaker.py"
+    "/usr/local/share/hypr-tweaker/src/hypr_tweaker.py"
+    "$HOME/.local/share/hypr-tweaker/src/hypr_tweaker.py"
+    "$HOME/.local/share/hypr-tweaker/hypr_tweaker.py"
+)
+
+for target in "${CANDIDATES[@]}"; do
+    if [[ -f "$target" ]]; then
+        exec python3 "$target" "$@"
+    fi
+done
+
+echo "Error: hypr_tweaker.py not found in any standard installation location." >&2
+exit 1

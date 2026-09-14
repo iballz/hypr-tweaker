@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.bak
+*.pre-psr.bak
+
+# Packages / Build
+build/
+dist/
+*.egg-info/
+*.tar.gz
+*.tar.xz
+*.pkg.tar.zst
+srcdir/
+pkg/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*~
